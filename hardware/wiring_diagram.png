@@ -1,0 +1,9 @@
+- Raspberry Pi (GPIO pinout)
+
+GT511C3 sensor (UART connection)
+
+DHT22 sensor (GPIO)
+
+Relay module (controlled via GPIO)
+
+Buzzer and LED
