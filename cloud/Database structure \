@@ -1,0 +1,30 @@
+```json
+{
+  "auth": {
+    "otp": "123456"
+  },
+  "logs": {
+    "uid1": {
+      "timestamp": "2025-07-04 14:23",
+      "temperature": 32.1,
+      "humidity": 70
+    }
+  },
+  "thresholds": {
+    "temperature": 35,
+    "humidity": 80
+  }
+}
+```
+
+---
+
+## 🔐 Optional Security Rules (for production)
+```json
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+```
