@@ -1,0 +1,36 @@
+### 1. Create Firebase Project
+- Go to [https://console.firebase.google.com](https://console.firebase.google.com)
+- Click **"Add Project"**
+- Name it (e.g., `TwoWayAuthPi`)
+- Disable Google Analytics (optional)
+
+### 2. Enable Realtime Database
+- Navigate to **Build > Realtime Database**
+- Click **Create Database**
+- Start in **Test Mode** (later you can restrict access)
+
+### 3. Generate Service Account Key
+- Go to **Project Settings > Service Accounts**
+- Click **"Generate new private key"**
+- Save the downloaded `firebase_key.json` to your project folder
+
+### 4. Install Firebase Admin SDK on Raspberry Pi
+```bash
+pip3 install firebase-admin
+```
+
+### 5. Sample Python Firebase Integration
+```python
+import firebase_admin
+from firebase_admin import credentials, db
+
+cred = credentials.Certificate("firebase_key.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://your-project-id.firebaseio.com/'
+})
+
+# Write and read example
+otp_ref = db.reference('auth/otp')
+otp_ref.set('123456')
+print("Current OTP:", otp_ref.get())
+```
