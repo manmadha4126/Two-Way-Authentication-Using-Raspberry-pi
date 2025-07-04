@@ -1,0 +1,7 @@
+In MIT App Inventor, click “Build” > “App (provide QR code for .apk)”.
+
+Download the .apk file.
+
+Rename it as TwoWayAuthApp.apk.
+
+Upload it into the mobile_app/ folder.
