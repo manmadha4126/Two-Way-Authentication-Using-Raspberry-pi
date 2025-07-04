@@ -45,11 +45,31 @@ Check the [hardware/wiring_diagram.png](hardware/wiring_diagram.png) for connect
 4. Install the mobile APK from [`mobile_app/apk/`](mobile_app/apk/).
 5. Scan the QR code (generated on Pi) using the app for TOTP setup.
 
-## 📱 Mobile App
-The mobile app enables user enrollment, OTP generation, and real-time environmental monitoring. Built using MIT App Inventor. [See Screenshots](images/screenshots/)
+## 🚀 How to Use
 
-## 📄 Research Paper
-Published in IJNRD: [Read Paper](research/IJNRD2311374.pdf)
+### 1. Hardware Setup
+Connect all components based on the diagram in `hardware/wiring_diagram.png`.
+
+### 2. Firebase Setup
+Refer to `cloud/firebase_structure.md` for Firebase configuration and integration.
+
+### 3. Code Execution
+- Upload `fingerprint_auth.py` to the Raspberry Pi
+- Install dependencies using `pip3`
+- Connect to Firebase and run the script
+
+### 4. Mobile App
+- Install the APK found in `mobile_app/`
+- Scan the secret QR code from Raspberry Pi to enroll
+- Generate OTP for validation
+
+## 📂 Folder Overview
+- `firmware/` - Python logic for authentication
+- `gui/` - Optional GUI interface for Pi
+- `cloud/` - Firebase configuration
+- `hardware/` - Circuit diagrams and parts list
+- `mobile_app/` - App blocks and APK
+- `research/` - Original research paper
 
 ## 📚 License
 MIT License
