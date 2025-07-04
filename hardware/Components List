@@ -1,0 +1,30 @@
+### 1. Raspberry Pi 3/4 (Model B preferred)
+- Acts as the central controller
+- Interfaces with fingerprint sensor, DHT22, Firebase
+- Supports Python and GPIO
+
+### 2. GT511C3 Fingerprint Sensor
+- Biometric scanner for authentication
+- Interfaces via UART to Raspberry Pi
+- Built-in fingerprint storage and matching capability
+
+### 3. DHT22 Sensor
+- Measures temperature and humidity
+- Provides digital output to Raspberry Pi
+- Used as an environmental authentication factor
+
+### 4. Relay Module
+- Controls external devices (e.g., door lock or light)
+- Triggered upon successful authentication
+
+### 5. LED Indicator
+- Visual feedback for access granted/denied
+
+### 6. Buzzer
+- Audible feedback for authentication status
+
+### 7. Power Supply
+- Power for Raspberry Pi and peripherals
+
+### 8. Jumper Wires & Breadboard
+- Connections between components
